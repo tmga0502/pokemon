@@ -1,0 +1,209 @@
+body{
+    min-width: 400px;
+    margin: 0;
+    color: #4c4c4c;
+}
+
+a{
+    color: #4c4c4c;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #4c4c4c;
+    opacity:0.8;
+}
+
+h1{
+    font-size:1.2rem;
+}
+
+h2{
+    font-size:1.2rem;
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+p{
+    margin-top:20px;
+}
+
+small{
+    background:#333;
+    color:#fff;
+    display: block;
+    text-align: center;
+    padding:20px;
+}
+
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 !important;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding:10px;
+    transition:all 0.3s;
+}
+
+nav ul li.current a,
+nav ul li a:hover{
+    color:#555;
+    opacity: 0.6;
+}
+
+
+#header{
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+}
+
+.nav-image{
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.nav-text{
+    font-size: 12px;
+}
+
+.poke_box{
+    position:relative;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.poke_box:hover {
+    top:-5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 検索 */
+.poke-search{
+    width: 180px;
+    border: 1px solid #cecece;
+    padding: 5px 20px;
+    border-radius: 50px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.poke-search img, .poke-search span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.poke-search:hover{
+    top:-5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* モーダルウインドウ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    margin: 20% auto;
+    width: 50%;
+    min-width: 400px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.modal-header h1 {
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.modal-header {
+    border-radius: 20px 20px 0 0;
+    background: #ff0000;
+    padding: 3px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#modalClose {
+    color: #fff;
+    font-size: 2rem;
+    margin: auto 0;
+}
+
+#modalClose:hover {
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+
+.input-group{
+    width: 50%;
+    margin: 30px auto;
+}
+
+.search-label{
+    text-align: left;
+}
+
+.search-label, .search-input{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.search-input{
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.submit_area{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* ボタンをクリックしたとき、ボタンを下に移動する */
+.submit_area button:active {
+    transform: translateY(0.2em);
+}
+
+
+/* 検索結果表示 */
+.result-area{
+    width: 50%;
+    margin: 60px auto 20px auto;
+    text-align: center;
+}
+
+.result-area p{
+    font-weight: bold;
+}
