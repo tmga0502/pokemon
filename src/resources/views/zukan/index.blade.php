@@ -37,6 +37,6 @@
 
   </div>
 
-  @include('home.index_items.modal')
+  @include('zukan.index_items.modal')
 
 @endsection

@@ -18,7 +18,7 @@ const getPokemon = async (min, max) =>{
         await $('#poke_area').append(
             `
              <div class="col-6 col-md-4 col-lg-3 col-xl-2 d-none poke_col">
-                <a href="" class="poke_link" data-id="${id}" data-name="${ja_name.name}">
+                <a href="/detail/${id}" class="poke_link" data-id="${id}" data-name="${ja_name.name}">
                   <div class="poke_box p-2">
                     <div class=w-100">
                       <img src="${img_url}" alt="${ja_name.name}"/>
