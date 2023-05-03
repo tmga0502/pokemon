@@ -262,3 +262,40 @@ nav ul li a:hover{
            -webkit-transform: scaleY(1.0);
        }
 }
+
+
+/*詳細ページ*/
+.pokemon_number{
+    font-weight: bold;
+    font-size: 1.2rem !important;
+}
+
+.pokemon_name{
+    font-weight: bold;
+    font-size: 1.5rem !important;
+}
+
+.poke-dl{
+    display: table;
+    width: 100%;
+}
+
+.poke-dl dt {
+    display: table-cell;
+    vertical-align: middle;
+    width: 0;
+    white-space: nowrap;
+}
+.poke-dl dd {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2%;
+}
+.poke-dl dd img {
+    width: 40px;
+    height: 40px;
+}
+
+.poke-dl dd span {
+    font-size: 0.8rem;
+}
