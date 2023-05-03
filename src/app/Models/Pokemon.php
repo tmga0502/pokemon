@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * @method static count()
+ * @method static insert(array $insert_array)
+ */
 class Pokemon extends Model
 {
     use HasFactory;
