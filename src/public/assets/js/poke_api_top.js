@@ -1,3 +1,5 @@
+//※注意：APIの接続回数に制限あるため、実務としては使用できない//
+
 //ポケモンデータの読み込み（非同期処理）
 const getPokemon = async (min, max) =>{
     //画面レイアウト上、ブラウザサイズによって表示される列数が2,3,4,6列のいずれか。
@@ -8,7 +10,7 @@ const getPokemon = async (min, max) =>{
         const pokemon_data = await pokemon.json()
         const id = i  //id(let宣言しているi)
         const img_url = pokemon_data['sprites']['other']['official-artwork']['front_default'] //画像の取得
-
+console.log(pokemon_data)
         //種族情報から名前の取得
         const species = await fetch(pokemon_data['species']['url'])
         const species_data = await species.json()
