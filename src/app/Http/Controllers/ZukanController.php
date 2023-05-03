@@ -13,6 +13,7 @@ class ZukanController extends Controller
   }
 
   public function show($id){
-    return view('zukan.show', compact('id'));
+    $pokemon = Pokemon::with('pokemon_type.type')->find($id);
+    return view('zukan.show', compact('pokemon'));
   }
 }
