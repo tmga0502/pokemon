@@ -15,8 +15,8 @@ class CreatePokemonTypesTable extends Migration
     {
         Schema::create('pokemon_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->comment('タイプ名');
-            $table->string('color')->comment('タイプの色');
+            $table->integer('pokemon_id')->comment('PokemonのID');
+            $table->integer('type_id')->comment('TypeのID');
             $table->timestamps();
         });
     }

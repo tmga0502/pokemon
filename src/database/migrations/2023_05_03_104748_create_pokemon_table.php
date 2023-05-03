@@ -15,13 +15,13 @@ class CreatePokemonTable extends Migration
     {
         Schema::create('pokemon', function (Blueprint $table) {
             $table->id();
-            $table->string('number')->comment('図鑑ナンバー');
+            $table->integer('number')->comment('図鑑ナンバー');
             $table->string('name')->comment('名前');
             $table->string('image_path')->comment('画像パス');
             $table->string('classification')->comment('分類');
-            $table->integer('height')->comment('高さ');
-            $table->integer('weight')->comment('重さ');
-            $table->string('characteristic')->comment('特性');
+            $table->double('height')->comment('高さ');
+            $table->double('weight')->comment('重さ');
+            $table->string('ability')->comment('特性');
             $table->integer('hp')->comment('HP');
             $table->integer('attack')->comment('攻撃');
             $table->integer('defense')->comment('防御');
