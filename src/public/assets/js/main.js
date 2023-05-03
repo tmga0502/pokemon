@@ -17,7 +17,7 @@ $(() => {
 
     //Modal以外のコンテンツクリック
     $(document).on('click', (e) => {
-        if ($(e.target).attr('id') == 'searchModal') {
+        if ($(e.target).attr('id') === 'searchModal') {
             $('#searchModal').addClass('d-none').removeClass('d-block')
             result_pokemon_area_del()
         }
@@ -30,6 +30,12 @@ $(() => {
 
 
 })
+
+
+$('#get_data_button').on('click', () => {
+    $('#get_data_button').addClass('d-none')
+})
+
 
 // 検索ボタンが押されたときの処理
 
@@ -44,7 +50,7 @@ searchButton.addEventListener('click', () => {
     // const result_text = document.getElementById('result_text')
 
     //IDと名前両方入力がされていたらエラー
-    if(pokeId != '' && pokeName != ''){
+    if(pokeId !== '' && pokeName !== ''){
         alert('IDと名前の両方を検索することはできません。')
         return
     }
@@ -87,12 +93,12 @@ searchButton.addEventListener('click', () => {
     // }
 
 
-    if(pokeId != ''){
+    if(pokeId !== ''){
         //名前検索
         let pokemon = document.querySelector('[data-id="' + pokeId +'"]')
         poke_search_result(pokemon)
     }
-    if(pokeName != ''){
+    if(pokeName !== ''){
         //名前検索
         let pokemon = document.querySelector('[data-name="' + pokeName +'"]')
         poke_search_result(pokemon)

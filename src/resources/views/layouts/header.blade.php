@@ -5,10 +5,19 @@
   <nav>
     <ul id="g-navi">
       <li>
-        <a href="">
+        <a href="{{ route('index') }}">
           <div class="d-block">
-            <img class="nav-image d-block mx-auto my-0" src="./assets/img/ball.png">
+            <img class="nav-image d-block mx-auto my-0" src="./assets/img/ball.png" alt="図鑑" />
             <span class="nav-text d-block mt-2">図鑑</span>
+          </div>
+        </a>
+      </li>
+
+      <li id="get_data_button">
+        <a href="{{ route('get_pokemon_data') }}">
+          <div class="d-block">
+            <img class="nav-image d-block mx-auto my-0" src="./assets/img/masterball.png" alt="データを取得" />
+            <span class="nav-text d-block mt-2">データを取得</span>
           </div>
         </a>
       </li>
@@ -16,7 +25,7 @@
       <li class="ms-4">
         <a href="{{ route('session.destroy') }}">
           <div class="d-block">
-            <img class="nav-image d-block mx-auto my-0" src="./assets/img/logout.png">
+            <img class="nav-image d-block mx-auto my-0" src="./assets/img/logout.png" alt="ログアウト" />
             <span class="nav-text d-block mt-2">ログアウト</span>
           </div>
         </a>

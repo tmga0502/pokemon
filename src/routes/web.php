@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\SessionController as Session;
 use App\Http\Controllers\ZukanController as Zukan;
+use App\Http\Controllers\PokemonController as Pokemon;
 
 
 //ログイン
@@ -13,6 +14,7 @@ Route::group(['middleware' => ['auth']], static function(){
   //図鑑
   Route::get('/', [Zukan::class, 'index'])->name('index');//TOPページ
   Route::get('/detail/{id}', [Zukan::class, 'show'])->name('show');//詳細ページ
+  Route::get('/get_pokemon_data', [Pokemon::class, 'get'])->name('get_pokemon_data');//ポケモンデータの取得
 
 
   //マイページ
