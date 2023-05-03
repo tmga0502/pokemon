@@ -7,8 +7,8 @@
   <div class="container-sm my-5">
 
     <div class="row">
-      <div class="col-12 col-md-6 pt-5">
-        <img class="img-fluid mx-auto" src="{{ $pokemon->image_path }}" alt="{{ $pokemon->name }}" />
+      <div class="col-12 col-md-6">
+        <img class="img-fluid mx-auto p-4" src="{{ $pokemon->image_path }}" alt="{{ $pokemon->name }}" />
       </div>
 
       <div class="col-12 col-md-6 my-auto">
@@ -24,7 +24,7 @@
 
     <div class="row">
 
-      <div class="col-12 col-md-6 pt-5">
+      <div class="col-12 col-md-6">
         <div class="card shadow h-100">
           <div class="card-body p-5">
             <dl>
@@ -37,7 +37,7 @@
               <dd>
                 @foreach($pokemon->pokemon_type as $pokemon_type)
                   <div class="d-inline-block text-center">
-                    <img  src="{{ url($pokemon_type->type->icon_path) }}">
+                    <img  src="{{ url($pokemon_type->type->icon_path) }}" alt="属性アイコン" />
                     <span>{{ $pokemon_type->type->name }}</span>
                   </div>
                 @endforeach
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-6 pt-5">
+      <div class="col-12 col-md-6">
         <div class="card shadow h-100">
           <div class="card-body p-5">
             <dl>
