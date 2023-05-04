@@ -23,9 +23,9 @@ class PokemonController extends Controller
       //Guzzleをインスタンス化
       $client = new Client();
 
-      //①に+1した数から10匹分のポケモンをAPIから取得
+      //①に+1した数から50匹分のポケモンをAPIから取得
       $insert_array = [];
-      for($i=$pokemon_count+1; $i<$pokemon_count+11; $i++){
+      for($i=$pokemon_count+1; $i<$pokemon_count+51; $i++){
         try {
           $response = $client->request('GET', 'https://pokeapi.co/api/v2/pokemon/' . $i);
         } catch (GuzzleException $e) {
