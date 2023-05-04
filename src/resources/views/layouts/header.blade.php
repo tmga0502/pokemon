@@ -11,7 +11,7 @@
       <ul>
         <li><a href="{{ route('index') }}">ポケモン図鑑</a></li>
         <li><a href="#">捕まえに行く</a></li>
-        <li><a href="#">My図鑑</a></li>
+        <li><a href="{{ route('my_pokemon.index') }}">Myポケモン</a></li>
         <li><a href="{{ route('get_pokemon_data') }}">データを取得</a></li>
         <li class="mt-5"><a href="{{ route('session.destroy') }}">ログアウト</a></li>
       </ul>
@@ -40,10 +40,10 @@
       </li>
 
       <li>
-        <a href="{{ route('index') }}">
+        <a href="{{ route('my_pokemon.index') }}">
           <div class="d-block">
             <img class="nav-image d-block mx-auto" src="{{ url('/assets/img/my_zukan.png') }}" alt="マップ" />
-            <span class="nav-text d-block mt-2">My図鑑</span>
+            <span class="nav-text d-block mt-2">Myポケモン</span>
           </div>
         </a>
       </li>
