@@ -36,25 +36,15 @@
 
     </div>
 
-    <div id="more_pokemon_btn" class="row mb-5 d-none">
-      <div class="col-12 text-center">
-        <button class="btn btn-outline-danger btn-sm w-50 rounded-pill">更に読み込む</button>
-      </div>
-    </div>
-{{--    <div class="row">--}}
-{{--      <div class="col-12">--}}
-{{--        <div id="spinner">--}}
-{{--          <div class="rect1"></div>--}}
-{{--          <div class="rect2"></div>--}}
-{{--          <div class="rect3"></div>--}}
-{{--          <div class="rect4"></div>--}}
-{{--          <div class="rect5"></div>--}}
-{{--        </div>--}}
+{{--    <div id="more_pokemon_btn" class="row mb-5 d-none">--}}
+{{--      <div class="col-12 text-center">--}}
+{{--        <button class="btn btn-outline-danger btn-sm w-50 rounded-pill">更に読み込む</button>--}}
 {{--      </div>--}}
 {{--    </div>--}}
 
   </div>
 
   @include('zukan.index_items.modal')
+  @include('zukan.index_items.loader')
 
 @endsection

@@ -209,58 +209,35 @@ nav ul li a:hover{
 }
 
 
-/* loading image */
-#spinner {
-    margin: 20px auto;
+/* ポケモンデータ取得時のローダー */
+#loader_area {
+    position: fixed;
     width: 100%;
-    height: 40px;
-    text-align: center;
-    font-size: 10px;
-}
-
-#spinner > div {
-    background-color: #ff0000;
+    min-width: 400px;
     height: 100%;
-    width: 6px;
-    display: inline-block;
-
-    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    background-color: #ffffff;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
 }
-
-#spinner .rect2 {
-    -webkit-animation-delay: -1.1s;
-    animation-delay: -1.1s;
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
 }
-
-#spinner .rect3 {
-    -webkit-animation-delay: -1.0s;
-    animation-delay: -1.0s;
+.loader_text{
+    font-size: 2rem;
+    text-align: center;
+    color: #ff0000;
 }
-
-#spinner .rect4 {
-    -webkit-animation-delay: -0.9s;
-    animation-delay: -0.9s;
-}
-
-#spinner .rect5 {
-    -webkit-animation-delay: -0.8s;
-    animation-delay: -0.8s;
-}
-
-@-webkit-keyframes sk-stretchdelay {
-    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
-    20% { -webkit-transform: scaleY(1.0) }
-}
-
-@keyframes sk-stretchdelay {
-    0%, 40%, 100% {
-        transform: scaleY(0.4);
-        -webkit-transform: scaleY(0.4);
-    }  20% {
-           transform: scaleY(1.0);
-           -webkit-transform: scaleY(1.0);
-       }
+.loader_text span{
+    font-size: 1rem;
 }
 
 

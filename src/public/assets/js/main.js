@@ -31,9 +31,11 @@ $(() => {
 
 })
 
-
+//************
+// ポケモンデータ取得時の処理
+// ***********
 $('#get_data_button').on('click', () => {
-    $('#get_data_button').addClass('d-none')
+    $('#loader_area').removeClass('d-none')
 })
 
 
