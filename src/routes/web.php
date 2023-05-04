@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\SessionController as Session;
 use App\Http\Controllers\ZukanController as Zukan;
 use App\Http\Controllers\PokemonController as Pokemon;
 use App\Http\Controllers\MyPokemonController as MyPokemon;
+use App\Http\Controllers\GoToGetController as GoToGet;
 
 
 //ログイン
@@ -20,10 +21,11 @@ Route::group(['middleware' => ['auth']], static function(){
   //Myポケモン
   Route::get('/my_pokemon', [MyPokemon::class, 'index'])->name('my_pokemon.index');//TOPページ
 
-  //マイページ
-//  Route::prefix('/my_page')->name('my_page.')->group(static function () {
-//    Route::get('/', [SettingIndex::class, 'index'])->name('index');
-//  });
+  //捕まえに行く
+  Route::get('/go_to_get', [GoToGet::class, 'index'])->name('go_to_get.index');//TOPページ
+  Route::post('/go_to_get/throw_ball', [GoToGet::class, 'throw_ball'])->name('go_to_get.throw_ball');//ボールを投げる
+
+
 
   //ログアウト
   Route::get('/logout', [Session::class, 'destroy'])->name('session.destroy');

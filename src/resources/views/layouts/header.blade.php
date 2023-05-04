@@ -10,7 +10,7 @@
     <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
       <ul>
         <li><a href="{{ route('index') }}">ポケモン図鑑</a></li>
-        <li><a href="#">捕まえに行く</a></li>
+        <li><a href="{{ route('go_to_get.index') }}">捕まえに行く</a></li>
         <li><a href="{{ route('my_pokemon.index') }}">Myポケモン</a></li>
         <li><a href="{{ route('get_pokemon_data') }}">データを取得</a></li>
         <li class="mt-5"><a href="{{ route('session.destroy') }}">ログアウト</a></li>
@@ -31,7 +31,7 @@
       </li>
 
       <li>
-        <a href="{{ route('index') }}">
+        <a href="{{ route('go_to_get.index') }}">
           <div class="d-block">
             <img class="nav-image d-block mx-auto" src="{{ url('/assets/img/map.png') }}" alt="マップ" />
             <span class="nav-text d-block mt-2">捕まえに行く</span>

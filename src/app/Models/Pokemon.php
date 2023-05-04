@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static count()
  * @method static insert(array $insert_array)
  * @method static find($id)
+ * @method static inRandomOrder()
  */
 class Pokemon extends Model
 {
