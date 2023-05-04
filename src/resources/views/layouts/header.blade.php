@@ -1,5 +1,7 @@
 <header id="header" class="w-100 d-flex bg-white text-black text-center p-2">
-  <img class="w-auto h-100" src="{{ url('/assets/img/logo.png') }}" alt="ロゴ">
+  <a class="w-auto h-100" href="{{ route('index') }}">
+    <img class="w-auto h-100" src="{{ url('/assets/img/logo.png') }}" alt="ロゴ">
+  </a>
 
   @if(Auth::check())
   <nav>
