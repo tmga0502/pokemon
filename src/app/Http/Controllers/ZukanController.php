@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class ZukanController extends Controller
 {
   public function index(){
-    $pokemons = Pokemon::all();
+    //ページネーション使用時はAppServiceProviderに記述必要
+    $pokemons = Pokemon::paginate(48);
     return view('zukan.index', compact('pokemons'));
   }
 

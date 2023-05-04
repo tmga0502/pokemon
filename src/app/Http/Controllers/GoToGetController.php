@@ -14,7 +14,7 @@ class GoToGetController extends Controller
       $pokemon = Pokemon::inRandomOrder()->first();
 
       //Getできる確率を選択
-      $probability_array = [10, 20, 30, 50, 80, 100];
+      $probability_array = [10, 20, 30, 50];
       $key = array_rand($probability_array, 1);
       $probability = $probability_array[$key];
 

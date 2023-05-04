@@ -38,6 +38,14 @@
 
     </div>
 
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="mt-1 mb-1 row justify-content-center">
+          {{ $pokemons->links() }}
+        </div>
+      </div>
+    </div>
+
 {{--    <div id="more_pokemon_btn" class="row mb-5 d-none">--}}
 {{--      <div class="col-12 text-center">--}}
 {{--        <button class="btn btn-outline-danger btn-sm w-50 rounded-pill">更に読み込む</button>--}}
