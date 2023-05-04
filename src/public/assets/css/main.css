@@ -37,13 +37,13 @@ small{
 }
 
 
-
 nav ul{
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 0 !important;
 }
+
 
 nav ul li a{
     display: block;
@@ -66,14 +66,131 @@ nav ul li a:hover{
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
 }
 
+.header-logo{
+    min-width: 200px;
+}
+
 .nav-image{
     width: 40px !important;
     height: 40px !important;
 }
 
 .nav-text{
+    white-space: nowrap;
     font-size: 12px;
 }
+
+/*ハンバーガーメニュー*/
+.open_btn{
+    position: relative;
+    background:#666;
+    cursor: pointer;
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.open_btn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+}
+
+.open_btn span:nth-of-type(1),
+.open_btn span:nth-of-type(3) {
+    height: 2px;
+    background: #fff;
+    width: 62%;
+    left: 10px;
+}
+
+.open_btn span:nth-of-type(1) {
+    top:13px;
+}
+
+.open_btn span:nth-of-type(2) {
+    top:19px;
+    left:11px;
+    font-size:0.6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.open_btn span:nth-of-type(3) {
+    top:36px;
+}
+
+.open_btn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.open_btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.open_btn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* レスポンシブメニュー */
+#g-nav{
+    position:fixed;
+    z-index: 999;
+    top:0;
+    left: -120%;
+    width:100%;
+    height: 100vh;
+    background: #ff6f6f;
+    transition: all 0.6s;
+    /*opacity: 0.7;*/
+}
+
+#g-nav.panelactive{
+    left: 0;
+}
+
+
+#g-nav.panelactive #g-nav-list{
+    position: fixed;
+    z-index: 999;
+    width:100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav ul {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+#g-nav li{
+    list-style: none;
+    text-align: center;
+}
+
+#g-nav li a{
+    color: #fff;
+    text-decoration: none;
+    padding:10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+
 
 .poke_box{
     position:relative;

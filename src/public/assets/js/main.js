@@ -1,6 +1,12 @@
 $(() => {
     "use strict"
 
+
+    $(".open_btn").on('click', () => {
+        $(".open_btn").toggleClass('active');
+        $("#g-nav").toggleClass('panelactive');
+    });
+
 //************
 // Modal
 // ***********
